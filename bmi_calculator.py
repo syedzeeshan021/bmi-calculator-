@@ -8,14 +8,14 @@ st.write("Calculate your BMI and get personalized health advice! 😊")
 
 # Height input in feet and inches
 st.subheader("📏 Your Height")
-height_feet = st.slider("Enter your height (in feet):", min_value=4, max_value=8, value=5, step=1, format="%d ft")
-height_inches = st.slider("Enter your height (in inches):", min_value=0, max_value=11, value=5, step=1, format="%d in")
+height_feet = st.slider("Enter your height (in feet):", min_value=4, max_value=8, value=0, step=1, format="%d ft")
+height_inches = st.slider("Enter your height (in inches):", min_value=0, max_value=11, value=0, step=1, format="%d in")
 
 # Convert height from feet and inches to meters
 height_in_meters = (height_feet * 0.3048) + (height_inches * 0.0254)
 
 st.subheader("⚖️ Your Weight")
-weight = st.slider("Enter your weight (in kg):", 40, 300, 70, step=1, format="%d kg")
+weight = st.slider("Enter your weight (in kg):", min_value=0,max_value=300,value=0, step=1, format="%d kg")
 
 # Calculate BMI
 bmi = weight / (height_in_meters**2)
